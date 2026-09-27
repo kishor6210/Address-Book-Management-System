@@ -1,0 +1,305 @@
+# Address Book Management System
+
+A menu-driven **Address Book Management System developed in C** for creating, searching, editing, deleting, listing, and storing contact information.
+
+## Features
+
+- Create new contacts
+- List all contacts
+- Search contacts by:
+  - Name
+  - Phone Number
+  - Email ID
+- Edit contacts by:
+  - Name
+  - Phone Number
+  - Email ID
+- Delete contacts by:
+  - Name
+  - Phone Number
+  - Email ID
+- Handles multiple contacts with the same name
+- Validates names, phone numbers, and email IDs
+- Prevents duplicate phone numbers
+- Prevents duplicate email IDs
+- Automatically sorts contacts alphabetically by name when a new contact is created
+- Loads contacts from a file when the program starts
+- Saves contacts to a CSV file when the program exits
+- Menu-driven user interface
+
+## Technologies Used
+
+- **Programming Language:** C
+- **Compiler:** GCC
+- **Data Storage:** CSV / Text Files
+
+## C Concepts Used
+
+- Structures
+- Arrays
+- Strings
+- Functions
+- Pointers
+- Searching
+- Sorting
+- File Handling
+- Input Validation
+- CRUD Operations
+- Modular Programming
+
+## Project Structure
+
+```text
+AddressBook/
+│
+├── main.c
+├── contact.c
+├── contact.h
+├── file.c
+├── file.h
+├── addressbook.csv
+└── README.md
+```
+
+## File Description
+
+| File | Description |
+|------|-------------|
+| `main.c` | Contains the main function and main menu of the application |
+| `contact.c` | Contains contact creation, search, edit, delete, list, and validation functions |
+| `contact.h` | Header file containing declarations related to contact operations |
+| `file.c` | Contains functions for loading contacts from and saving contacts to files |
+| `file.h` | Header file containing file-handling function declarations |
+| `addressbook.csv` | Stores contact information in CSV format |
+| `README.md` | Project documentation |
+
+## Application Modules
+
+### 1. Create Contact
+
+The user can create a new contact by entering:
+
+- Name
+- Phone Number
+- Email ID
+
+Each field is validated before the contact is added.
+
+The application checks for duplicate phone numbers and email IDs.
+
+After creating a contact, the contacts are automatically sorted alphabetically by name.
+
+### 2. List Contacts
+
+Displays all contacts in an organized format.
+
+Example:
+
+```text
+Name                      Phone Number         Email
+----------------------------------------------------------------
+Amit                      9876543210           amit@gmail.com
+Kishor                    8765432109           kishor@gmail.com
+Rahul                     9123456780           rahul@gmail.com
+```
+
+### 3. Search Contact
+
+Contacts can be searched using:
+
+- Name
+- Phone Number
+- Email ID
+
+If multiple contacts have the same name, the matching contacts are displayed and the user can select the required contact.
+
+### 4. Edit Contact
+
+Contacts can be edited using:
+
+- Name
+- Phone Number
+- Email ID
+
+The corresponding field is updated after validation.
+
+For example:
+
+- Edit by Name → updates the name
+- Edit by Phone Number → updates the phone number
+- Edit by Email ID → updates the email ID
+
+### 5. Delete Contact
+
+Contacts can be deleted using:
+
+- Name
+- Phone Number
+- Email ID
+
+When deleting by name, multiple matching contacts are displayed so that the user can select the required contact.
+
+### 6. File Handling
+
+The application uses file handling to maintain contact information.
+
+Contacts are loaded when the application starts and updated contact information is saved when the application exits.
+
+The main CSV file used by the project is:
+
+```text
+addressbook.csv
+```
+
+Example:
+
+```text
+Amit,9876543210,amit@gmail.com
+Kishor,8765432109,kishor@gmail.com
+Rahul,9123456780,rahul@gmail.com
+```
+
+## Validation
+
+### Name Validation
+
+The name is validated before creating or editing a contact.
+
+### Phone Number Validation
+
+The phone number must:
+
+- Contain exactly 10 digits
+- Start with a digit from `6` to `9`
+- Be unique in the address book
+
+### Email Validation
+
+The email ID is validated for:
+
+- Presence of `@`
+- Presence of `.`
+- Only one `@`
+- Only one `.`
+- `.` must occur after `@`
+- At least one character between `@` and `.`
+- No extra characters after `.com`
+- Invalid symbols are rejected
+- Email ID must be unique
+
+## Automatic Sorting
+
+Contacts are automatically sorted alphabetically by **name** whenever a new contact is created.
+
+Example:
+
+```text
+Before:
+
+Rahul
+Suresh
+
+New Contact:
+
+Amit
+
+After:
+
+Amit
+Rahul
+Suresh
+```
+
+No separate sorting option is required in the menu.
+
+## Menu
+
+The application provides a menu-driven interface.
+
+```text
+========== Address Book ==========
+
+1. Create Contact
+2. Search Contact
+3. Edit Contact
+4. Delete Contact
+5. List Contacts
+6. Exit
+
+Enter your choice:
+```
+
+## How to Compile
+
+Make sure GCC is installed on your system.
+
+Compile the project using:
+
+```bash
+gcc main.c contact.c file.c -o addressbook
+```
+
+## How to Run
+
+### Windows
+
+```bash
+addressbook.exe
+```
+
+### Linux
+
+```bash
+./addressbook
+```
+
+## Example Workflow
+
+```text
+1. Start the application
+        ↓
+2. Load existing contacts
+        ↓
+3. Create / Search / Edit / Delete / List contacts
+        ↓
+4. New contacts are automatically sorted by name
+        ↓
+5. Exit the application
+        ↓
+6. Save updated contacts to addressbook.csv
+```
+
+## Learning Outcomes
+
+This project helped in practicing:
+
+- C programming fundamentals
+- Structures
+- Functions
+- Pointers
+- Arrays
+- String handling
+- Searching
+- Sorting
+- File handling
+- CSV file operations
+- Input validation
+- CRUD operations
+- Modular programming
+- Problem solving and debugging
+
+## Future Improvements
+
+- Case-insensitive searching
+- Improved email validation
+- Sorting by phone number or email
+- Import/export of additional file formats
+- Database integration
+- Graphical user interface
+- Improved user interface and error handling
+
+## Author
+
+**Kishor Ashtekar**
+
+C Programming | Embedded Systems | Software Development
