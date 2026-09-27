@@ -1,6 +1,6 @@
-# Address Book Management System
+# Address Book: Simplifying Contact Management and Organization
 
-A menu-driven **Address Book Management System developed in C** for creating, searching, editing, deleting, listing, and storing contact information.
+A menu-driven **Address Book: Simplifying Contact Management and Organization developed in C** for creating, searching, editing, deleting, listing, and storing contact information.
 
 ## Features
 
@@ -236,7 +236,7 @@ Make sure GCC is installed on your system.
 Compile the project using:
 
 ```bash
-gcc main.c contact.c file.c -o addressbook
+gcc *.c
 ```
 
 ## How to Run
@@ -244,14 +244,10 @@ gcc main.c contact.c file.c -o addressbook
 ### Windows
 
 ```bash
-addressbook.exe
+./a.out
 ```
 
-### Linux
 
-```bash
-./addressbook
-```
 
 ## Example Workflow
 
