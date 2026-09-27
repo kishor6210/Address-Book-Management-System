@@ -3,7 +3,6 @@
 #include <string.h>
 #include "contact.h"
 #include "file.h"
-#include "populate.h"
 #include <ctype.h>
 
 void listContacts(AddressBook *addressBook) 
