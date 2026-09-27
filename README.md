@@ -1,6 +1,6 @@
-# Address Book: Simplifying Contact Management and Organization
+# Address Book Management System
 
-A menu-driven **Address Book: Simplifying Contact Management and Organization developed in C** for creating, searching, editing, deleting, listing, and storing contact information.
+A menu-driven **Address Book Management System developed in C** for creating, searching, editing, deleting, listing, and storing contact information.
 
 ## Features
 
